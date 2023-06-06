@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Header } from '../components/Header'
 
 export function WordCounter() {
   const [disabled, setDisabled] = useState(true)
@@ -33,8 +34,7 @@ export function WordCounter() {
   
   return (
     <main className="px-6 py-12 text-center">
-      <h1 className="text-lg">Word Counter</h1>
-      <p className="mb-8 text-lg">Free online character and word count tool</p>
+      <Header title="Word Counter" description="Free online character and word count tool" />
       <form>
         <textarea onChange={handleChange} className="w-[32rem] h-[16rem] pt-2 pl-3 border-2 border-slate-600" type="text" placeholder="Type or paste your text" />
       </form>
